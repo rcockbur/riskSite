@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   end
 
   def units
-    
+
   end
 end
