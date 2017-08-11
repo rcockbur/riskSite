@@ -1,0 +1,6 @@
+
+<h1 class="text-center page-title">Units</h1>
+<hr class="cardtop-hr">
+<% Unit.units.each do |unit| %>
+    <%= render :partial => "units/unit", :locals => { :unit => unit } %>
+<% end %>

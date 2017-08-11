@@ -1,0 +1,25 @@
+<div class="unit" >
+  <div class="row">
+
+    <div class="col-xs-3">
+
+    </div>
+    <div class="col-xs-9">
+      <h3 class=" unit-title"><%= "#{ unit[:name] }" %></h3><br>
+      <p><%= unit[:desc] %></p>
+      <br>
+      <strong style="display:inline">Abilities</strong><br>
+      <% if unit[:rules].is_a?(String) %>
+          <p style="display:inline"><%= unit[:rules] %></p><br>
+      <% else %>
+          <% unit[:rules].each do |rule| %>
+              <p style="display:inline"><%= rule %></p><br>
+          <% end %>
+      <% end %>
+      <br>
+      <strong style="display:inline">Strong vs: </strong><p style="display:inline"><%= unit[:strong] %></p><br>
+      <strong style="display:inline">Weak vs:   </strong><p style="display:inline"><%= unit[:weak] %></p><br>
+    </div>
+  </div>
+</div>
+<hr/>
