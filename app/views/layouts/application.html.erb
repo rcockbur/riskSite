@@ -9,6 +9,19 @@
   </head>
 
   <body>
-    <%= yield %>
+  <div class="row main-row">
+    <div class="col-xs-2 sidebar"></div>
+    <div class="col-xs-8 main-column">
+      <%= render "shared/header" %>
+      <div class="card">
+        <%= yield %>
+      </div>
+    </div>
+    <div class="col-xs-2 sidebar"></div>
+
+
+
+  </div>
+  </div>
   </body>
 </html>
