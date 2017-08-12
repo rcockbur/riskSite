@@ -7,16 +7,24 @@
     <div class="col-xs-9">
       <h3 class=" unit-title"><%= "#{ unit[:name] }" %></h3><br>
       <p><%= unit[:desc] %></p>
-      <br>
-      <strong style="display:inline">Abilities</strong><br>
-      <% if unit[:rules].is_a?(String) %>
-          <p style="display:inline"><%= unit[:rules] %></p><br>
-      <% else %>
-          <% unit[:rules].each do |rule| %>
-              <p style="display:inline"><%= rule %></p><br>
-          <% end %>
+
+      <% unless unit[:abilities].blank? %>
+          <h4 style="display:inline"><strong>Abilities</strong></h4><br>
+          <ul>
+            <% unit[:abilities].each do |ability| %>
+                <li><p style="display:inline"><strong><%= ability[:name] %>:</strong> <%= ability[:desc] %></p></li>
+            <% end %>
+          </ul>
       <% end %>
-      <br>
+
+      <% unless unit[:special_rules].blank? %>
+        <h4 style="display:inline"><strong>Special Rules</strong></h4><br>
+        <ul>
+        <% unit[:special_rules].each do |special_rule| %>
+            <li><p style="display:inline"><%= special_rule %></p></li>
+        <% end %>
+        </ul>
+      <% end %>
       <strong style="display:inline">Strong vs: </strong><p style="display:inline"><%= unit[:strong] %></p><br>
       <strong style="display:inline">Weak vs:   </strong><p style="display:inline"><%= unit[:weak] %></p><br>
     </div>

@@ -1,67 +1,67 @@
 class Ability
-  self.ABILITIES = {
-      :buildStructure => {
-          :name => 'Build Structure',
-          :desc => '',
-      },
+  ABILITIES = {
+    :buildStructure => {
+        :name => 'Build Structure',
+        :desc => '',
+    },
 
-      :buildTrench => {
-          :name => 'Build Trench',
-          :desc => 'Builds a Trench. Infantry units can occupy the trench and attack from safety.'
-      },
+    :buildTrench => {
+        :name => 'Build Trench',
+        :desc => 'Builds a Trench. Infantry units can occupy the trench and attack from safety.'
+    },
 
-      :setupWeapon => {
-          :name => 'Setup Weapon',
-          :desc => "Stops the caster in place, but enables it's main weapon.",
-      },
+    :setupWeapon => {
+        :name => 'Setup Weapon',
+        :desc => "Stops the caster in place, but enables it's main weapon.",
+    },
 
-      :packWeapon => {
-          :name => 'Pack Weapon',
-          :desc => "Allows the caster to move again, but disables it's main weapon",
-      },
+    :packWeapon => {
+        :name => 'Pack Weapon',
+        :desc => "Allows the caster to move again, but disables it's main weapon",
+    },
 
-      :faceTarget => {
-          :name => 'Face Target',
-          :desc => 'Turns the caster to face the target location. Useful for ensuring the Artillery is facing the right direction before setting up',
-      },
+    :faceTarget => {
+        :name => 'Face Target',
+        :desc => 'Turns the caster to face the target location. Useful for ensuring the Artillery is facing the right direction before setting up',
+    },
 
-      :loadGasAttack => {
-          :name => 'Load Gas Attack',
-          :desc => 'Loads the Howitzer with a gas shell, which will be fired with the next shot. Gas damages infantry units in an area, especially those inside trenches.',
-      },
+    :loadGasAttack => {
+        :name => 'Load Gas Attack',
+        :desc => 'Loads the Howitzer with a gas shell, which will be fired with the next shot. Gas damages infantry units in an area, especially those inside trenches.',
+    },
 
-      :submerge => {
-          :name => 'Submerge',
-          :desc => 'The Submarine submerges under the sea. It becomes invisible to enemies, but loses movement speed. While submerged it can be spotted by an enemy Port or Destroyer.',
-      },
+    :submerge => {
+        :name => 'Submerge',
+        :desc => 'The Submarine submerges under the sea. It becomes invisible to enemies, but loses movement speed. While submerged it can be spotted by an enemy Port or Destroyer.',
+    },
 
-      :surface => {
-          :name => 'Surface',
-          :desc => "The Submarine returns to the surface. It becomes visible and recovers movement speed.",
-      },
+    :surface => {
+        :name => 'Surface',
+        :desc => "The Submarine returns to the surface. It becomes visible and recovers movement speed.",
+    },
 
-      :scanTheDepths => {
-          :name => 'Scan the Depths',
-          :desc => 'The Destroyer searches the sea. It temporarily slows down but gains the ability to detect submerged Mines and Submarines.',
-      },
+    :scanTheDepths => {
+        :name => 'Scan the Depths',
+        :desc => 'The Destroyer searches the sea. It temporarily slows down but gains the ability to detect submerged Mines and Submarines.',
+    },
 
-      :pickUpMine => {
-          :name => 'Pick up Mine',
-          :desc => 'The Ship picks up a mine. Ships can carry up to 8 mines at once.',
-      },
+    :pickUpMine => {
+        :name => 'Pick up Mine',
+        :desc => 'The Ship picks up a mine. Ships can carry up to 8 mines at once.',
+    },
 
-      :layMine => {
-          :name => 'Lay Mine',
-          :desc => 'The Ship places a mine at the target location. The Mine becomes invisible shortly after being placed.',
-      },
+    :layMine => {
+        :name => 'Lay Mine',
+        :desc => 'The Ship places a mine at the target location. The Mine becomes invisible shortly after being placed.',
+    },
 
-      :callToArms => {
-          :name => 'Call to Arms',
-          :desc => 'The City sacrifices population to summon an instant Militia army with timed life.',
-      },
+    :callToArms => {
+        :name => 'Call to Arms',
+        :desc => 'The City sacrifices population to summon an instant Militia army with timed life.',
+    },
   }
 
-  def get(ability)
+  def self.get(ability)
     return self.ABILITIES[ability]
   end
 end
