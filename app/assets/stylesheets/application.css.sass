@@ -18,16 +18,26 @@
 @import "bootstrap-sprockets"
 @import "bootstrap"
 
+.main-column
+  padding: 0px !important
+  max-width: 1000px !important
+  margin-left: auto !important
+  margin-right: auto !important
+
+.link:hover
+    background-color: aliceblue
+
+//--HEADER
 .header 
   background-color: #f0f0f0 
   text-align: center 
   padding: 0px !important 
   margin: 0px !important
   border-radius: 15px
-
   border-top-left-radius: 0px
   border-top-right-radius: 0px
-
+  border: 2px solid #777777
+  border-top: 0px
 
 .header-title 
   font-family: "Courier New" 
@@ -36,77 +46,58 @@
   padding: 0px !important 
   padding-top: 0px !important 
   margin: 0px !important 
-  margin-bottom: -5px !important 
-
-
+  margin-bottom: -5px !important
 
 .header-links 
   margin: 0px !important 
   padding: 0px !important 
-  font-size: 20px 
+  font-size: 20px
 
+.header-link
+  border-left-style: solid !important
+  border-color: #777777 !important
+  border-width: 2px
+
+.header-link-last
+  border-right-style: solid !important
+
+.header-link:hover
+  background-color: yellow
 
 .header-links div 
   padding-top: 5px !important 
   padding-bottom: 5px !important 
 
-
-.header-hr 
+.header-hr
+  border: 1px solid #777777
   margin: 0px !important 
   padding: 0px !important 
 
-
-.sidebar 
-  background-color: #777777 !important 
-  padding: 0 !important 
-
+//--Body
 
 .page-title 
   padding: 10px !important
   padding-bottom: 5px !important
   margin: 0px !important 
   font-weight: bold !important 
-  font-size: 40px 
+  font-size: 40px
 
 
-.main-row 
-  padding: 0px !important 
-  margin: 0px !important
 
 .unit-title 
   margin-bottom: -10px !important 
   margin-top: -3px !important 
-  font-weight: bold !important 
-
+  font-weight: bold !important
 
 hr 
   border-color: #777777 !important 
   margin: 5px !important 
-  padding: 5px !important 
-
-
-.main-column 
-  padding: 0px !important 
-  max-width: 1000px !important
-  margin-left: auto !important
-  margin-right: auto !important
-
+  padding: 5px !important
 
 .card 
   background-color: #f0f0f0 
   border-radius: 15px 
   margin-top: 10px
-
-
-.full 
-  border-style: solid 
-  border: solid #000 
-  border-color: #777777 !important 
-  border-width: 1px
-  border-bottom: none
-  margin-top: -1px !important 
-  margin-right: -1px !important 
-  margin-bottom: 0px !important
 
 .page-content
   margin: 15px !important

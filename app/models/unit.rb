@@ -3,6 +3,7 @@ class Unit
     return {
         :worker => {
             :name => 'Worker',
+            :attributes => ['Infantry'],
             :desc => 'Workers build all your Structures. Most importantly, they can build the Barracks and Factory, which in turn can build all your units.',
             :abilities => [ability(:buildStructure)],
             :special_rules => [rule(:occupyTrench)],
@@ -12,6 +13,7 @@ class Unit
         },
         :rifle => {
             :name => 'Riflemen',
+            :attributes => ['Infantry'],
             :desc => 'Riflemen are a cheap and well-rounded unit. They are decently fast and good for occupying trenches, serving as mobile reserves, and breaching enemy lines.',
             :abilities => [ability(:buildTrench)],
             :special_rules => [rule(:occupyTrench), rule(:bayonet)],
@@ -21,6 +23,7 @@ class Unit
         },
         :mg => {
             :name => 'Machine Gun',
+            :attributes => ['Infantry'],
             :desc => 'Machine Guns can run and shoot like a riflemen, but can also stop to deploy their powerful machine gun. They automatically use their machine-gun when occupying a trench.',
             :abilities => [ability(:buildTrench), ability(:setupWeapon), ability(:packWeapon)],
             :special_rules => [rule(:occupyTrench), rule(:mgTrench)],
@@ -30,6 +33,7 @@ class Unit
         },
         :mortar => {
             :name => 'Mortar',
+            :attributes => ['Infantry'],
             :desc => 'Mortars have more range than riflemen or machine guns, but less overall damage. They do however get a large bonus vs Structures, Ships, and Tanks.',
             :abilities => [ability(:buildTrench)],
             :special_rules => [rule(:occupyTrench)],
@@ -39,6 +43,7 @@ class Unit
         },
         :militia => {
             :name => 'Militia',
+            :attributes => ['Infantry'],
             :desc => 'Militia cannot be trained like other units, but are instead spawned by Cities or Capitols using the Call-to-Arms ability. They also appear amongst the rebels in the Russian Revolution and the Easter Uprising. Militia are similar to Riflemen, but have less life and damage.',
             :abilities => [],
             :special_rules => [],
@@ -48,6 +53,7 @@ class Unit
         },
         :fg => {
             :name => 'Field Gun',
+            :attributes => ['Artillery'],
             :desc => 'Field Guns are light artillery. They fire a shrapnel shell deals splash damage to units in a wide area, dealing bonus damage to infantry.',
             :abilities => [ability(:setupWeapon), ability(:packWeapon), ability(:faceTarget)],
             :special_rules => [rule(:direction)],
@@ -57,6 +63,7 @@ class Unit
         },
         :howitzer => {
             :name => 'Howitzer',
+            :attributes => ['Artillery'],
             :desc => 'Howitzers are heavy artillery. They fire a high-explosive shell that deals bonus damage vs Artillery, Tanks, Structures, and Ships.',
             :abilities => [ability(:setupWeapon), ability(:packWeapon), ability(:faceTarget), ability(:loadGasAttack)],
             :special_rules => [rule(:direction)],
@@ -66,6 +73,7 @@ class Unit
         },
         :railway => {
             :name => 'Railway Gun',
+            :attributes => ['Artillery'],
             :desc => 'Railway Guns heavy artillery. They are similar to howitzers, but have more range, and more damage vs Structures',
             :abilities => [ability(:setupWeapon), ability(:packWeapon), ability(:faceTarget)],
             :special_rules => [rule(:direction)],
@@ -75,6 +83,7 @@ class Unit
         },
         :tank => {
             :name => 'Tank',
+            :attributes => ['Tank'],
             :desc => 'Tanks are the only unit that can withstand machine-gun fire, making them useful as front-line troops. ',
             :abilities => [],
             :special_rules => [],
@@ -84,6 +93,7 @@ class Unit
         },
         :balloon => {
             :name => 'Observation Balloon',
+            :attributes => ['Air'],
             :desc => 'Balloons can see farther than any other unit. Use them to see over terrain and spot distant units.',
             :abilities => [],
             :special_rules => [],
@@ -92,6 +102,7 @@ class Unit
             :img => 'balloon.jpg',
         },
         :airplane => {
+            :attributes => ['Air'],
             :name => 'Airplane',
             :desc => 'Airplanes can see almost as far as balloons, but are much faster and can shoot other air units.',
             :abilities => [],
@@ -101,6 +112,7 @@ class Unit
             :img => 'airplane.jpg',
         },
         :battleship => {
+            :attributes => ['Naval,', 'Massive'],
             :name => 'Battleship',
             :desc => 'Battleships are very tough and have powerful attack that deals splash damage',
             :abilities => [ability(:pickUpMine), ability(:layMine)],
@@ -111,6 +123,7 @@ class Unit
         },
         :destroyer => {
             :name => 'Destroyer',
+            :attributes => ['Naval'],
             :desc => 'Destroyers are fast warships that can scan their surroundings for submarines or mines.',
             :abilities => [ability(:scanTheDepths), ability(:pickUpMine), ability(:layMine)],
             :special_rules => [],
@@ -120,6 +133,7 @@ class Unit
         },
         :submarine => {
             :name => 'Submarine',
+            :attributes => ['Naval'],
             :desc => 'Submarines deal alot of damage, but are very fragile. They can submerge under water, making them invisible unless spotted by an enemy Destroyer or Port.',
             :abilities => [ability(:submerge), ability(:surface), ability(:pickUpMine), ability(:layMine)],
             :special_rules => [],
@@ -129,6 +143,7 @@ class Unit
         },
         :transport => {
             :name => 'Transport',
+            :attributes => ['Naval'],
             :desc => 'Transports can load and unload units, allowing them to move across the water.',
             :abilities => [],
             :special_rules => [],
@@ -138,6 +153,7 @@ class Unit
         },
         :mine => {
             :name => 'Mine',
+            :attributes => ['Naval'],
             :desc => 'Mines detonate on enemy ships that come too close, killing them instantly.',
             :abilities => [],
             :special_rules => [],
