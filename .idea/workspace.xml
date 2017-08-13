@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9b944d5-332c-4471-8f1c-999c5137f558" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
-    </list>
+    <list default="true" id="f9b944d5-332c-4471-8f1c-999c5137f558" name="Default" comment="" />
     <ignored path="riskSite.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -431,12 +429,12 @@
       <workItem from="1502475232139" duration="142000" />
       <workItem from="1502475405714" duration="603000" />
       <workItem from="1502478794101" duration="8895000" />
-      <workItem from="1502489128010" duration="43934000" />
+      <workItem from="1502489128010" duration="44558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53574000" />
+    <option name="totallyTimeSpent" value="54198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="24" width="1869" height="1056" extended-state="6" />
