@@ -15,3 +15,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+alert("whatup");
+$("#link").click( function() {
+    e.preventDefault();
+    alert('hi');
+    return false;
+});

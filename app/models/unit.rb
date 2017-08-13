@@ -8,7 +8,7 @@ class Unit
             :special_rules => [rule(:occupyTrench), rule(:bayonet)],
             :strong => 'Mortars, Howitzers',
             :weak => 'Machine Guns, Field Guns',
-            :img => '',
+            :img => 'rifle.jpg',
         },
         :mg => {
             :name => 'Machine Gun',
@@ -17,7 +17,7 @@ class Unit
             :special_rules => [rule(:occupyTrench), rule(:mgTrench)],
             :strong => 'Infantry, Almost anything that comes too close',
             :weak => 'Trenches, Tanks, Field Guns',
-            :img => '',
+            :img => 'mg_mobile.jpg',
         },
         :mortar => {
             :name => 'Mortar',
@@ -26,7 +26,7 @@ class Unit
             :special_rules => [rule(:occupyTrench)],
             :strong => 'Trenches, Machine Guns, Ships, Tanks',
             :weak => 'Riflemen, Field Guns',
-            :img => '',
+            :img => 'mortar.jpg',
         },
         :fg => {
             :name => 'Field Gun',
@@ -35,7 +35,7 @@ class Unit
             :special_rules => [rule(:direction)],
             :strong => 'Infantry',
             :weak => 'Howitzers, Tanks',
-            :img => '',
+            :img => 'fg_mobile.jpg',
         },
         :howitzer => {
             :name => 'Howitzer',
@@ -44,7 +44,7 @@ class Unit
             :special_rules => [rule(:direction)],
             :strong => 'Artillery, Tanks, Structures, and Ships',
             :weak => 'Infantry',
-            :img => '',
+            :img => 'howitzer_mobile.jpg',
         },
         :balloon => {
             :name => 'Observation Balloon',
@@ -53,7 +53,7 @@ class Unit
             :special_rules => [],
             :strong => '',
             :weak => '',
-            :img => '',
+            :img => 'balloon.jpg',
         },
         :airplane => {
             :name => 'Airplane',
@@ -62,7 +62,7 @@ class Unit
             :special_rules => [],
             :strong => 'Balloons',
             :weak => '',
-            :img => '',
+            :img => 'airplane.jpg',
         },
         :tank => {
             :name => 'Tank',
@@ -71,7 +71,7 @@ class Unit
             :special_rules => [],
             :strong => 'Machine Gun, Field Gun',
             :weak => 'Riflemen, Mortars, Howitzers',
-            :img => '',
+            :img => 'tank.jpg',
         },
         :railway => {
             :name => 'Railway Gun',
@@ -80,7 +80,7 @@ class Unit
             :special_rules => [rule(:direction)],
             :strong => 'Artillery, Tanks, Structures, Ships',
             :weak => 'Infantry',
-            :img => '',
+            :img => 'rg_mobile.jpg',
         },
         :battleship => {
             :name => 'Battleship',
@@ -89,7 +89,7 @@ class Unit
             :special_rules => [],
             :strong => 'Destroyer, Anything to close to the coast',
             :weak => 'Submarines, Mines, Fortress',
-            :img => '',
+            :img => 'battleship.jpg',
         },
         :destroyer => {
             :name => 'Destroyer',
@@ -98,7 +98,7 @@ class Unit
             :special_rules => [],
             :strong => 'Submarines, Mines',
             :weak => 'Battleships, Fortress, Mortars',
-            :img => '',
+            :img => 'destroyer.jpg',
         },
         :submarine => {
             :name => 'Submarine',
@@ -116,7 +116,7 @@ class Unit
             :special_rules => [],
             :strong => '',
             :weak => '',
-            :img => '',
+            :img => 'transport.jpg',
         },
         :mine => {
             :name => 'Mine',
@@ -125,7 +125,7 @@ class Unit
             :special_rules => [],
             :strong => 'Ships',
             :weak => 'Destoyers scan ability, Ports',
-            :img => '',
+            :img => 'mine.jpg',
         },
         :worker => {
             :name => 'Worker',
@@ -134,7 +134,7 @@ class Unit
             :special_rules => [rule(:occupyTrench)],
             :strong => '',
             :weak => '',
-            :img => '',
+            :img => 'worker.jpg',
         }
     }
   end
