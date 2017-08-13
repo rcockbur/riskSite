@@ -15,9 +15,22 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-alert("whatup");
-$("#link").click( function() {
-    e.preventDefault();
-    alert('hi');
-    return false;
+
+function myFunction() {
+    alert("hi");
+}
+
+$( document ).ready(function() {
+    // Handler for .ready() called.
+    document.getElementById("link-home").addEventListener("click", function() {
+        window.location.href = '/';
+    });
+    document.getElementById("link-units").addEventListener("click", function() {
+        window.location.href = '/units';
+    });
 });
+
+
+
+
+

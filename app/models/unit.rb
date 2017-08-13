@@ -1,6 +1,15 @@
 class Unit
   def self.UNITS
     return {
+        :worker => {
+            :name => 'Worker',
+            :desc => 'Workers build all your Structures. Most importantly, they can build the Barracks and Factory, which in turn can build all your units.',
+            :abilities => [ability(:buildStructure)],
+            :special_rules => [rule(:occupyTrench)],
+            :strong => '',
+            :weak => '',
+            :img => 'worker.jpg',
+        },
         :rifle => {
             :name => 'Riflemen',
             :desc => 'Riflemen are a cheap and well-rounded unit. They are decently fast and good for occupying trenches, serving as mobile reserves, and breaching enemy lines.',
@@ -17,7 +26,7 @@ class Unit
             :special_rules => [rule(:occupyTrench), rule(:mgTrench)],
             :strong => 'Infantry, Almost anything that comes too close',
             :weak => 'Trenches, Tanks, Field Guns',
-            :img => 'mg_mobile.jpg',
+            :img => 'mg_setup.jpg',
         },
         :mortar => {
             :name => 'Mortar',
@@ -28,6 +37,15 @@ class Unit
             :weak => 'Riflemen, Field Guns',
             :img => 'mortar.jpg',
         },
+        :militia => {
+            :name => 'Militia',
+            :desc => 'Militia cannot be trained like other units, but are instead spawned by Cities or Capitols using the Call-to-Arms ability. They also appear amongst the rebels in the Russian Revolution and the Easter Uprising. Militia are similar to Riflemen, but have less life and damage.',
+            :abilities => [],
+            :special_rules => [],
+            :strong => '',
+            :weak => '',
+            :img => 'militia.jpg',
+        },
         :fg => {
             :name => 'Field Gun',
             :desc => 'Field Guns are light artillery. They fire a shrapnel shell deals splash damage to units in a wide area, dealing bonus damage to infantry.',
@@ -35,7 +53,7 @@ class Unit
             :special_rules => [rule(:direction)],
             :strong => 'Infantry',
             :weak => 'Howitzers, Tanks',
-            :img => 'fg_mobile.jpg',
+            :img => 'fg_setup.jpg',
         },
         :howitzer => {
             :name => 'Howitzer',
@@ -44,7 +62,25 @@ class Unit
             :special_rules => [rule(:direction)],
             :strong => 'Artillery, Tanks, Structures, and Ships',
             :weak => 'Infantry',
-            :img => 'howitzer_mobile.jpg',
+            :img => 'howitzer_setup.jpg',
+        },
+        :railway => {
+            :name => 'Railway Gun',
+            :desc => 'Railway Guns heavy artillery. They are similar to howitzers, but have more range, and more damage vs Structures',
+            :abilities => [ability(:setupWeapon), ability(:packWeapon), ability(:faceTarget)],
+            :special_rules => [rule(:direction)],
+            :strong => 'Artillery, Tanks, Structures, Ships',
+            :weak => 'Infantry',
+            :img => 'rg_setup.jpg',
+        },
+        :tank => {
+            :name => 'Tank',
+            :desc => 'Tanks are the only unit that can withstand machine-gun fire, making them useful as front-line troops. ',
+            :abilities => [],
+            :special_rules => [],
+            :strong => 'Machine Gun, Field Gun',
+            :weak => 'Riflemen, Mortars, Howitzers',
+            :img => 'tank.jpg',
         },
         :balloon => {
             :name => 'Observation Balloon',
@@ -63,24 +99,6 @@ class Unit
             :strong => 'Balloons',
             :weak => '',
             :img => 'airplane.jpg',
-        },
-        :tank => {
-            :name => 'Tank',
-            :desc => 'Tanks are the only unit that can withstand machine-gun fire, making them useful as front-line troops. ',
-            :abilities => [],
-            :special_rules => [],
-            :strong => 'Machine Gun, Field Gun',
-            :weak => 'Riflemen, Mortars, Howitzers',
-            :img => 'tank.jpg',
-        },
-        :railway => {
-            :name => 'Railway Gun',
-            :desc => 'Railway Guns heavy artillery. They are similar to howitzers, but have more range, and more damage vs Structures',
-            :abilities => [ability(:setupWeapon), ability(:packWeapon), ability(:faceTarget)],
-            :special_rules => [rule(:direction)],
-            :strong => 'Artillery, Tanks, Structures, Ships',
-            :weak => 'Infantry',
-            :img => 'rg_mobile.jpg',
         },
         :battleship => {
             :name => 'Battleship',
@@ -107,7 +125,7 @@ class Unit
             :special_rules => [],
             :strong => 'Battleships',
             :weak => 'Destroyers',
-            :img => '',
+            :img => 'submarine.jpg',
         },
         :transport => {
             :name => 'Transport',
@@ -127,15 +145,6 @@ class Unit
             :weak => 'Destoyers scan ability, Ports',
             :img => 'mine.jpg',
         },
-        :worker => {
-            :name => 'Worker',
-            :desc => 'Workers build all your Structures. Most importantly, they can build the Barracks and Factory, which in turn can build all your units.',
-            :abilities => [ability(:buildStructure)],
-            :special_rules => [rule(:occupyTrench)],
-            :strong => '',
-            :weak => '',
-            :img => 'worker.jpg',
-        }
     }
   end
 
