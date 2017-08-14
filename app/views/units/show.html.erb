@@ -1,6 +1,22 @@
 
-<h1 class="text-center page-title">Units</h1>
-<hr class="cardtop-hr">
-<% Unit.UNITS.each_value do |value| %>
-    <%= render :partial => "units/unit", :locals => { :unit => value } %>
-<% end %>
+<h3 class="text-center">Infantry</h3><hr class="cardtop-hr">
+
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:worker] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:rifle] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:mg] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:mortar] } %>
+<h3 class="text-center">Artillery</h3><hr class="cardtop-hr">
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:fg] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:howitzer] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:railway] } %>
+<h3 class="text-center">Tank</h3><hr class="cardtop-hr">
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:tank] } %>
+<h3 class="text-center">Air</h3><hr class="cardtop-hr">
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:balloon] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:airplane] } %>
+<h3 class="text-center">Navy</h3><hr class="cardtop-hr">
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:battleship] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:destroyer] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:submarine] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:transport] } %>
+<%= render :partial => "units/unit", :locals => { :unit => Unit.UNITS[:mine] } %>
