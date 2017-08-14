@@ -22,10 +22,10 @@ function myFunction() {
 
 $( document ).ready(function() {
     // Handler for .ready() called.
-    document.getElementById("link-home").addEventListener("click", function() {
+    document.getElementsByClassName("js-link-home")[0].addEventListener("click", function() {
         window.location.href = '/';
     });
-    document.getElementById("link-units").addEventListener("click", function() {
+    document.getElementsByClassName("js-link-units")[0].addEventListener("click", function() {
         window.location.href = '/units';
     });
 });
