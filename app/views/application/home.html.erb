@@ -1,26 +1,52 @@
 <div class="page-content-home">
-  <h3 class=" unit-title text-center">Intro</h3><br>
+  <h3 class=" home-title home-title-first text-center">Introduction</h3><br>
   <p>
-  Risk: World War 1 is a total conversion mod for Starcraft 2, where the map consists of Europe and North Africa. Each player chooses from 9 possible nations, and fights with their allies to conquer land and win the war. Teams are based upon which nation you chose and cannot be changed.
+  Risk: World War 1 is a total conversion mod for Starcraft 2, where the map consists of Europe and North Africa. Each player chooses from 9 possible nations, and fights with their allies to win the war. There are two teams, the <strong>Entente</strong> and the <strong>Central Powers</strong>. Your team is decided by which nation you choose, and cannot be changed.
   </p>
-  <ul>
-    <li><strong>The Entente:</strong> France (blue), Russia (purple), Britain (red), Italy (green), and Serbia (brown)</li>
-    <li><strong>The Central Powers:</strong> Germany (black), Austria (pink), Bulgaria (orange), and the Ottomans (yellow)</li>
-  </ul>
-  <p>IMAGE OF MAP</p>
+  <div class="">
+    <div class="row map-section">
+      <div class="col-xs-3 no-padding">
+        <div class="minimap-sidebar">
+          <p style="margin-top:50px" class="team-heading">Entente</p>
+          <hr style="width:80%; margin-top:0; margin-bottom:5px">
+          <ul>
+            <li style="color: #e5090d">Britain</li>
+            <li style="color:#1244b0">France</li>
+            <li style="color:#450e61">Russia</li>
+            <li style="color:#0f5600">Italy</li>
+            <li style="color:#371e0d">Serbia</li>
+          </ul>
+          <p style="margin-top:40px" class="team-heading">Central Powers</p>
+          <hr style="width:80%; margin-top:0; margin-bottom:5px">
+          <ul>
+            <li style="color: #1d1f1a">Germany</li>
+            <li style="color:hotpink">Austria</li>
+            <li style="color:yellow">Ottoman Empire</li>
+            <li style="color:orange">Bulgaria</li>
+          </ul>
+        </div>
+      </div>
+      <div style="padding-left:0px; padding-right:0px" class="col-xs-9">
+
+        <%= (image_tag asset_path("minimap.jpg"), :class => "minimap align-center") %>
+        <p style="text-align:center; color:black">The minimap at the start of the game</p>
+      </div>
+    </div>
+  </div>
+
   <br>
 
-  <h3 class=" unit-title text-center">Settlements and Income</h3><br>
+  <h3 class=" home-title text-center">Settlements and Income</h3><br>
   <p>
   Scattered accross the map are 4 types of Settlements, Capitol Cities, Cities, Towns, and Ports. Each Settlement has defenses (health) and population (energy). Killing an enemy Settlement will capture it for you, and restore it defenses to full, but also kill off the entire population (it will recover slowly). At the end of every month (1 min) each player recieves income equal to their total population. Capuring and holding Settlements is the only way to increase income.</p>
   <br>
 
-  <h3 class=" unit-title text-center">Victory Conditions</h3><br>
+  <h3 class=" home-title text-center">Victory Conditions</h3><br>
   <p>
   Each team has a Warscore, a number at the top of their screen that tells them how well their team is doing. Warscore starts at 50, and goes up when your team gains more income, or when the enemy team loses income. Reaching 100 Warscore results in victory for your team, while 0 Warescore results in defeat.</p>
   <br>
 
-  <h3 class=" unit-title text-center">How to play</h3><br>
+  <h3 class=" home-title text-center">How to play</h3><br>
   <p>
   The goal of the game is to capture settlements, and for that you need an army. With your starting baracks, you can train infantry units: workers, riflemen, mortars, and machine guns. You can use a worker to build a factory, which can train field guns, howitzers, railway guns, tanks, airplanes, and balloons.
   </p>
@@ -42,8 +68,5 @@
   When <strong>defending a grind</strong>, its best to have loosely spaced trenches, with lots of riflemen. If you are being attacked by mortars, use field guns to keep them away. If you are being attacked by howitzers, try to snipe them with your infantry. If the its too well defended to attack with infantry, your best option is to get your own howitzers. Always try to focus fire your howitzers to attack enemy artillery first. When an enemy howitzer attacks your trench, evacuate the occupant before the trench is destroyed, and bring it back to a hospital to heal. Once it has healed, send it back to the front to dig new trenches, slowing the enemy advance.
   </p>
   <br>
-
-  <h3 class=" unit-title text-center">Trench Warfare</h3><br>
-  <p>Being based on WW1, this game revolves around trenches. All infantry units can build trenches, and they will automatically get in once finished. Whenever you take land from an opponent, building trenches there will help defend against counterattacks. One important note is that units inside trenches are not safe from all harm, they are still vulnerable to bayonets (from riflemen), high-explosives (from mortars, howitzers, railway guns, battleships), and gas-attacks (from howitzers).</p>
 </div>
 
