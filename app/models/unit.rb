@@ -224,6 +224,38 @@ class Unit
     }
   end
 
+  def self.NATIONS
+    return {
+      :germany => {
+          :desc => "Germany is the most powerful nation in the game, with the most income, and also the largest army at the start. Unfortunately, it is also sandwiched between two large opponents, France and Russia. it's large size, plus it's precarious position, make Germany the most important nation in the game."
+      },
+      :austria => {
+          :desc => "Austria is a major nation that is surrounded by three enemies, Russia, Italy, and Serbia. Russia is the most dangerous, but is often occupied by your allies. Italy is small, but only has one front to focus on, and is the main threat. Serbia is not very dangerous, as it is very small, and usually occupied with Bulgaria from the start."
+      },
+      :britain => {
+          :desc => "Britain is in a unique position, with two starting areas, the British Isles and Egypt. It also starts with the largest navy, and periodically recieves reinforcements by sea. Your main concern as Britain is the Ottomans Empire, but still defend your home islands, and consider helping in France."
+      },
+      :france=> {
+          :desc => "France is a major nation that only has one front, Germany. As a result, your strategy as France really depends on what Germany does. If Germany is focusing on you, play defensive. If Germany is focusing on Russia (or anywhere else), play more agressive."
+      },
+      :italy=> {
+          :desc => "Italy is similar to France, in that it has a single front with a larger opponent. As such, your strategy is dependant on what Austria does. The main difference is that Italy is also very coastal, which can pose a problem if the Ottomans come to dominate the sea."
+      },
+      :russia=> {
+          :desc => ""
+      },
+      :serbia => {
+          :desc => ""
+      },
+      :bulgaria => {
+          :desc => ""
+      },
+      :ottomans => {
+          :desc => ""
+      },
+    }
+  end
+
   def self.getUnit(unit)
     return self.UNITS[unit]
   end
