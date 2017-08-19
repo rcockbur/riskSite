@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root :to => 'application#home', :as => '/home'
   get '/home', :to => 'application#home'
   get '/units', :to => 'application#units'
+  get '/nations', :to => 'application#nations'
+  get '/strategy', :to => 'application#strategy'
 end

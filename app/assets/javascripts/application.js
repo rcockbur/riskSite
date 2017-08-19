@@ -23,10 +23,16 @@ function myFunction() {
 $( document ).ready(function() {
     // Handler for .ready() called.
     document.getElementsByClassName("js-link-home")[0].addEventListener("click", function() {
-        window.location.href = '/';
+        window.location.href = '/home';
     });
     document.getElementsByClassName("js-link-units")[0].addEventListener("click", function() {
         window.location.href = '/units';
+    });
+    document.getElementsByClassName("js-link-nations")[0].addEventListener("click", function() {
+        window.location.href = '/nations';
+    });
+    document.getElementsByClassName("js-link-strategy")[0].addEventListener("click", function() {
+        window.location.href = '/strategy';
     });
 });
 

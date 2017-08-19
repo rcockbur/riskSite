@@ -1,0 +1,10 @@
+<div class="unit" >
+  <p class="header-medium"><%= nation[:name] %></p>
+  <p style="display:inline">(<%= nation[:team] %>)</p>
+  <p>Starting income: <%= nation[:income] %>/month</p>
+  <p><%= nation[:desc] %></p>
+  <% unless nation[:special].blank? %>
+    <p style="display:inline"><strong>Special</strong></p><br>
+    <p><%= nation[:special] %></p>
+  <% end %>
+</div>

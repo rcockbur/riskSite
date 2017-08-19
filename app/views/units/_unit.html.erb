@@ -5,7 +5,7 @@
       <%= image_tag asset_path unit[:img] %>
     </div>
     <div class="col-xs-8">
-      <h3 class=" unit-title" style="display:inline"><%= "#{ unit[:name] }" %></h3>
+      <p class="header-medium"><%= "#{ unit[:name] }" %></p>
       <% unless unit[:attributes].blank? %>
         <p style="display:inline">(
           <% unit[:attributes].each do |attribute| %>
