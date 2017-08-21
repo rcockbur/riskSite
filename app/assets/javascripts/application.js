@@ -34,4 +34,7 @@ $( document ).ready(function() {
     document.getElementsByClassName("js-link-strategy")[0].addEventListener("click", function() {
         window.location.href = '/strategy';
     });
+    document.getElementsByClassName("js-link-structures")[0].addEventListener("click", function() {
+        window.location.href = '/structures';
+    });
 });

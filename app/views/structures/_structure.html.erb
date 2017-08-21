@@ -1,0 +1,45 @@
+<div class="unit" >
+  <div class="row">
+
+    <div class="col-xs-4 unit-portrait">
+      <%= image_tag asset_path unit[:img] %>
+    </div>
+    <div class="col-xs-8">
+      <p class="header-medium"><%= "#{ unit[:name] }" %></p>
+      <% unless unit[:attributes].blank? %>
+        <p style="display:inline">(
+          <% unit[:attributes].each do |attribute| %>
+              <%= attribute %>
+          <% end %>
+        )</p>
+      <% end %>
+      <p><%= unit[:desc] %></p>
+
+      <% unless unit[:abilities].blank? %>
+          <p style="display:inline"><strong>Abilities</strong></p><br>
+          <ul class="unit-ul">
+            <% unit[:abilities].each do |ability| %>
+                <li><p style="display:inline"><%= ability[:name] %>: <%= ability[:desc] %></p></li>
+            <% end %>
+          </ul>
+      <% end %>
+
+      <% unless unit[:special_rules].blank? %>
+        <p style="display:inline"><strong>Special Rules</strong></p><br>
+        <ul class="unit-ul">
+        <% unit[:special_rules].each do |special_rule| %>
+            <li><p style="display:inline"><%= special_rule %></p></li>
+        <% end %>
+        </ul>
+      <% end %>
+      <% unless unit[:strong].blank? %>
+          <strong style="display:inline">Strong vs: </strong><p style="display:inline"><%= unit[:strong] %></p><br>
+      <% end %>
+      <% unless unit[:weak].blank? %>
+          <strong style="display:inline">Weak vs:   </strong><p style="display:inline"><%= unit[:weak] %></p><br>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+<hr/>

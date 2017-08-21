@@ -14,7 +14,7 @@ class Info
       :rifle => {
         :name => 'Riflemen',
         :attributes => ['Infantry'],
-        :desc => 'Riflemen are the cheapest military unit available. They deal little damage, but are very mobile.',
+        :desc => 'Riflemen are the cheapest military unit available. Although they deal little damage, they are very mobile and effective when massed.',
         :abilities => [ability(:buildTrench)],
         :special_rules => [rule(:bayonet)],
         :strong => 'Mortar, Howitzer',
@@ -24,7 +24,7 @@ class Info
       :mg => {
         :name => 'Machine Gun',
         :attributes => ['Infantry'],
-        :desc => 'Machine Guns can run and shoot like a riflemen, but can also stop to deploy their powerful machine gun. They automatically use their machine-gun when occupying a trench.',
+        :desc => 'Machine guns can run and shoot like a riflemen, but can also stop to deploy their powerful machine gun. They automatically switch to their machine gun when occupying a trench. Machine guns deal bonus damage to infantry units.',
         :abilities => [ability(:buildTrench), ability(:setupMG)],
         :special_rules => [],
         :strong => 'Riflemen',
@@ -34,7 +34,7 @@ class Info
       :mortar => {
         :name => 'Mortar',
         :attributes => ['Infantry'],
-        :desc => 'Mortars have more range than riflemen or machine guns, but less overall damage. They do however get a large bonus vs Structures, Ships, and Tanks.',
+        :desc => 'Mortars have more range than riflemen or machine guns, but less overall damage. They deal bonus damage to structures, ships, and tanks.',
         :abilities => [ability(:buildTrench)],
         :special_rules => [],
         :strong => 'Trench, Machine Gun, Tank',
@@ -54,7 +54,7 @@ class Info
       :fg => {
         :name => 'Field Gun',
         :attributes => ['Artillery'],
-        :desc => 'Field Guns are light artillery. They fire a shrapnel shell deals splash damage to units in a wide area, dealing bonus damage to infantry.',
+        :desc => 'Field Guns are light artillery. They fire a shrapnel shell that deals splash damage to infantry units in a wide area. Field guns are mostly useless against anything beside infantry.',
         :abilities => [ability(:setupArtillery), ability(:faceTarget)],
         :special_rules => [],
         :strong => 'Riflemen, Mortar, Machine Gun',
@@ -64,7 +64,7 @@ class Info
       :howitzer => {
         :name => 'Howitzer',
         :attributes => ['Artillery'],
-        :desc => 'Howitzers are heavy artillery. They fire a high-explosive shell that deals bonus damage vs Artillery, Tanks, Structures, and Ships.',
+        :desc => 'Howitzers are heavy artillery. They fire a high-explosive shell that deal splash damage to infantry and trenches in a small radius. Deals bonus damage to tanks, structures, and ships.',
         :abilities => [ability(:setupArtillery), ability(:faceTarget), ability(:loadGasAttack)],
         :special_rules => [],
         :strong => 'Field Gun, Trench, Fortress',
@@ -74,7 +74,7 @@ class Info
       :railway => {
         :name => 'Railway Gun',
         :attributes => ['Artillery'],
-        :desc => 'Railway Guns heavy artillery. They are similar to howitzers, but have more range, and more damage vs Structures',
+        :desc => 'Railway guns are super heavy artillery. They function very similarly to a howitzer, but have more range, and are slower. They also deal even more damage vs structures.',
         :abilities => [ability(:setupArtillery), ability(:faceTarget)],
         :special_rules => [],
         :strong => 'Howitzer, Field Gun, Trench, Fortress',
@@ -84,7 +84,7 @@ class Info
       :tank => {
         :name => 'Tank',
         :attributes => ['Armored'],
-        :desc => 'Tanks are the only unit that can withstand machine-gun fire, making them useful as front-line troops. ',
+        :desc => 'Tanks are a relatively mobile unit with lots of health and armour. They are the only land unit that can withstand machine-gun fire, making them useful as front-line troops. Tanks are of limited effectivenes when on their own however, as they deal very little damage. They deal bonus damage to tanks, strucures, and ships.',
         :abilities => [],
         :special_rules => [],
         :strong => 'Machine Gun, Field Gun',
@@ -94,7 +94,7 @@ class Info
       :balloon => {
         :name => 'Observation Balloon',
         :attributes => ['Flying'],
-        :desc => 'Balloons are slow and cannot attack, but they can see very far. Use them to see over terrain and spot distant units.',
+        :desc => 'Balloons are slow and cannot attack, but they can see very far. Use them to see over terrain and spot distant units. This is very useful when combined with the long range of artillery.',
         :abilities => [],
         :special_rules => [],
         :strong => '',
@@ -104,7 +104,7 @@ class Info
       :airplane => {
         :attributes => ['Flying'],
         :name => 'Airplane',
-        :desc => 'Airplanes can see almost as far as balloons, but are much faster and can shoot other air units.',
+        :desc => "Airplanes can see almost as far as balloons, but are much faster and can shoot other air units. Since they don't have long range, they are often forced to fly over enemy lines to attack balloons. They are significantly improved by the upgrade 'synchronization gear'",
         :abilities => [],
         :special_rules => [],
         :strong => 'Observation Balloon',
@@ -114,7 +114,7 @@ class Info
       :battleship => {
         :attributes => ['Naval,', 'Massive'],
         :name => 'Battleship',
-        :desc => 'Battleships are very tough and have powerful attack that deals splash damage',
+        :desc => 'Battleships are a powerful warship with lots of life, and lots of armor. In addition, they have a powerful attack that deals splash damage to trenches and infantry. They deal bonus damage to tanks, structures, and ships.',
         :abilities => [ability(:pickUpMine)],
         :special_rules => [],
         :strong => 'Destroyer, Land units',
@@ -124,7 +124,7 @@ class Info
       :destroyer => {
         :name => 'Destroyer',
         :attributes => ['Naval'],
-        :desc => 'Destroyers are fast warships that can scan their surroundings for submarines or mines.',
+        :desc => 'Destroyers are fast warships with lots of armour. They can shoot air units, and scan their surroundings for submarines or mines. Destroyers are not very effective individually, but generally serve as support for battleships.',
         :abilities => [ability(:scanTheDepths), ability(:pickUpMine)],
         :special_rules => [],
         :strong => 'Submarine, Mine',
@@ -134,7 +134,7 @@ class Info
       :submarine => {
         :name => 'Submarine',
         :attributes => ['Naval'],
-        :desc => 'Submarines deal alot of damage, but are very fragile. They can submerge under water, making them invisible unless spotted by an enemy Destroyer or Port.',
+        :desc => 'Submarines are slow, fragile warships with a powerful attack. They can submerge under water, making them invisible unless spotted by an enemy destroyer or port. Submarines deal bonus damage to battleships.',
         :abilities => [ability(:submerge), ability(:pickUpMine)],
         :special_rules => [],
         :strong => 'Battleship',
@@ -173,7 +173,7 @@ class Info
 
       :buildTrench => {
         :name => 'Dig Trench',
-        :desc => 'Builds a trench, which can hold a single occupant. A unit inside a trench is protected against most types of damge, and can still attack.'
+        :desc => 'Builds a trench, which can hold a single occupant. A unit inside a trench is protected against most types of damage, and can still attack.'
       },
 
       :setupMG => {

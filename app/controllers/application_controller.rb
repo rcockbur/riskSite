@@ -17,4 +17,8 @@ class ApplicationController < ActionController::Base
   def strategy
     render 'strategy/show'
   end
+
+  def structures
+    render 'structures/show'
+  end
 end
