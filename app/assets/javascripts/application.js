@@ -15,11 +15,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-
-function myFunction() {
-    alert("hi");
-}
-
 $( document ).ready(function() {
     // Handler for .ready() called.
     document.getElementsByClassName("js-link-home")[0].addEventListener("click", function() {
@@ -37,4 +32,28 @@ $( document ).ready(function() {
     document.getElementsByClassName("js-link-structures")[0].addEventListener("click", function() {
         window.location.href = '/structures';
     });
+
+
+    switch(window.location.pathname) {
+        case '/units':
+            var d = document.getElementsByClassName("js-link-units")[0];
+            d.className += " header-link-selected";
+            break;
+        case '/structures':
+            var d = document.getElementsByClassName("js-link-structures")[0];
+            d.className += " header-link-selected";
+            break;
+        case '/strategy':
+            var d = document.getElementsByClassName("js-link-strategy")[0];
+            d.className += " header-link-selected";
+            break;
+        case '/nations':
+            var d = document.getElementsByClassName("js-link-nations")[0];
+            d.className += " header-link-selected";
+            break;
+        default:
+            var d = document.getElementsByClassName("js-link-home")[0];
+            d.className += " header-link-selected";
+            break;
+    }
 });
