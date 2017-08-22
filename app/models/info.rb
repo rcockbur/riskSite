@@ -164,6 +164,71 @@ class Info
     }
   end
 
+  def self.STRUCTURES
+    return {
+      :trench => {
+        :name => 'Trench',
+        :desc => 'The trench provides shelter for a single infantry unit. Units inside can attack from relative safety. The trench has lots of health and armour. Units inside are still vulnerable to three types of damage: bayonet, high explosives, and gas.',
+        :img => 'trench.jpg',
+      },
+      :barracks => {
+        :name => 'Barracks',
+        :desc => 'The barracks can train infantry units; workers, riflemen, machines guns, and mortars.',
+        :img => 'barracks.jpg',
+      },
+      :factory => {
+        :name => 'Factory',
+        :desc => 'The factory can train three types of artillery; field guns, howitzers, and railway guns, as well as tanks, airplanes, and observation balloons. Both tanks and railway guns must be researched before they can be built.',
+        :img => 'factory.jpg',
+      },
+      :railroad => {
+        :name => 'Railroad',
+        :desc => 'Railroads provide a movement speed bonus to nearby allied  units, as long as they are out of combat. This bonus is especially important for slow units such as howitzers and railway guns.',
+        :img => 'railroad.jpg',
+      },
+      :research => {
+        :name => 'Research Center',
+        :desc => 'The research center is where you get all your upgrades. Upgrades are quite varied in what they do, refer to individual tooltips for specifics. One upgrade, "Lessons of War", can only be researched in 1915, and unlocks several other upgrades.',
+        :img => 'research.jpg',
+      },
+      :hospital => {
+        :name => 'Hospital',
+        :desc => 'The hospital can heal up to 5 nearby infantry units at once. Units must be out of combat to be healed.',
+        :img => 'hospital.jpg',
+      },
+      :machine => {
+        :name => 'Machine Shop',
+        :desc => 'The machine shop can repair up to 3 nearby factory units at once. Units must be out of combat to be healed.',
+        :img => 'machine.jpg',
+      },
+      :fortress => {
+        :name => 'Fortress',
+        :desc => 'The fortress is a versatile defense structure, with more range than infantry but less range than artillery. They are most effective vs units with lots of armour such as tanks and ships.',
+        :img => 'fortress.jpg',
+      },
+      :town => {
+        :name => 'Town',
+        :desc => 'Towns are small settlements that provide 15 income per month when at full population. Towns can build workers when above 20% life',
+        :img => 'town.jpg',
+      },
+      :port => {
+        :name => 'Port',
+        :desc => 'Ports are small coastal settlements that provide 15 income per month when at full population. Ports can build and repair naval units when above 20% life. Ships can be repaired 3 at a time, and must be out of combat.',
+        :img => 'port.jpg',
+      },
+      :city => {
+        :name => 'City',
+        :desc => 'Cities are settlements that provide 30 income per month when at full population. Cities can build workers and spawn militia when above 20% population.',
+        :img => 'city.jpg',
+      },
+      :capitol => {
+        :name => 'Capitol',
+        :desc => 'Cities are large settlements that provide 60 income per month when at full population. Capitols can build workers and spawn militia when above 20% population.',
+        :img => 'capitol.jpg',
+      },
+    }
+  end
+
   def self.ABILITIES
     return {
       :buildStructure => {
