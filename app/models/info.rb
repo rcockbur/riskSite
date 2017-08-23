@@ -168,7 +168,7 @@ class Info
     return {
       :trench => {
         :name => 'Trench',
-        :desc => 'The trench provides shelter for a single infantry unit. Units inside can attack from relative safety. The trench has lots of health and armour. Units inside are still vulnerable to three types of damage: bayonet, high explosives, and gas.',
+        :desc => 'The trench provides shelter for a single infantry unit. Units inside can still attack, and are protected from most types of damage until the trench is destroyed. They are still vulnerable to three types of damage however: bayonet (from riflemen), high explosives (from mortars, howitzers, and battleships), and gas (from howitzer). Enemy units are significantly slowed when walking over trenches. Infantry units can get in enemy trenches if they are empty, capturing it for themselves.',
         :img => 'trench.jpg',
       },
       :barracks => {
@@ -183,37 +183,37 @@ class Info
       },
       :railroad => {
         :name => 'Railroad',
-        :desc => 'Railroads provide a movement speed bonus to nearby allied  units, as long as they are out of combat. This bonus is especially important for slow units such as howitzers and railway guns.',
+        :desc => 'Railroads provide a movement speed bonus to nearby allied units, as long as they are out of combat. This bonus is especially important for slow units such as howitzers and railway guns.',
         :img => 'railroad.jpg',
       },
       :research => {
         :name => 'Research Center',
-        :desc => 'The research center is where you get all your upgrades. Upgrades are quite varied in what they do, refer to individual tooltips for specifics. One upgrade, "Lessons of War", can only be researched in 1915, and unlocks several other upgrades.',
+        :desc => 'The research center is where you get all your upgrades. Upgrades are quite varied in what benefits they provide, refer to individual tooltips for specifics. One upgrade, "Lessons of War", can only be researched in 1915, and unlocks several other upgrades.',
         :img => 'research.jpg',
       },
       :hospital => {
         :name => 'Hospital',
-        :desc => 'The hospital can heal up to 5 nearby infantry units at once. Units must be out of combat to be healed.',
+        :desc => 'The hospital can heal up to six nearby infantry units at once. Units must be out of combat to be healed.',
         :img => 'hospital.jpg',
       },
       :machine => {
         :name => 'Machine Shop',
-        :desc => 'The machine shop can repair up to 3 nearby factory units at once. Units must be out of combat to be healed.',
+        :desc => 'The machine shop can repair up to three nearby factory units at once. Units must be out of combat to be healed.',
         :img => 'machine.jpg',
       },
       :fortress => {
         :name => 'Fortress',
-        :desc => 'The fortress is a versatile defense structure, with more range than infantry but less range than artillery. They are most effective vs units with lots of armour such as tanks and ships.',
+        :desc => 'The fortress is a versatile defense structure, with more range than infantry, but less range than artillery. They are most effective vs units with lots of armour, such as tanks and ships.',
         :img => 'fortress.jpg',
       },
       :town => {
         :name => 'Town',
-        :desc => 'Towns are small settlements that provide 15 income per month when at full population. Towns can build workers when above 20% life',
+        :desc => 'Towns are small settlements that provide 15 income per month when at full population. Towns can build workers when above 20% life.',
         :img => 'town.jpg',
       },
       :port => {
         :name => 'Port',
-        :desc => 'Ports are small coastal settlements that provide 15 income per month when at full population. Ports can build and repair naval units when above 20% life. Ships can be repaired 3 at a time, and must be out of combat.',
+        :desc => 'Ports are small coastal settlements that provide 15 income per month when at full population. Ports can build and repair naval units when above 20% life. Ships can be repaired two at a time, and must be out of combat.',
         :img => 'port.jpg',
       },
       :city => {
@@ -346,7 +346,8 @@ class Info
         :name => "The Ottoman Empire",
         :team => "Central Powers",
         :income => "600",
-        :desc => "The Ottoman Empire is a major nation with two small fronts, one with Russia, and one with british Egypt. The Ottomans are very coastal, and war with the British often involves significant naval action. On land, narrow fronts mean that it's relatively easy to defend the infantry rush, and artillery become especially useful."
+        :desc => "The Ottoman Empire is a major nation with two small fronts, one with Russia, and one with british Egypt. The Ottomans are very coastal, and war with the British often involves significant naval action. On land, narrow fronts mean that it's relatively easy to defend the infantry rush, and artillery become especially useful.",
+        :special => "Capitol city is Istanbul, which is located beside a bridge crossing the Bosphorus strait. Whoever controls Istanbul also gets control of the bridge, and it can be used by anyone on their team. To use the bridge, select some units and right click on it."
       },
     }
   end
